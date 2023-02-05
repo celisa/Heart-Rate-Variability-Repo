@@ -1,0 +1,31 @@
+---
+title: "STAT 542 Final Project"
+author: "Elisa Chen"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## EDA
+
+```{r}
+BIS_1 <- read.csv('https://raw.githubusercontent.com/celisa/Heart-Rate-Variability-Repo/main/01_data/06233283.ECG2442913AnesEvents-6%2B10mins_BIS.txt')
+
+RRI_1 <- read.csv('https://raw.githubusercontent.com/celisa/Heart-Rate-Variability-Repo/main/01_data/06233283.ECG2442913AnesEvents-6%2B10mins_RRI.txt')
+
+BIS_2 <- read.csv('https://raw.githubusercontent.com/celisa/Heart-Rate-Variability-Repo/main/01_data/3578243.ECG2177606AnesEvents-6%2B10mins_BIS.txt')
+
+RRI_2 <- read.csv('https://raw.githubusercontent.com/celisa/Heart-Rate-Variability-Repo/main/01_data/3578243.ECG2177606AnesEvents-6%2B10mins_RRI.txt')
+
+BIS_3 <- read.csv('https://raw.githubusercontent.com/celisa/Heart-Rate-Variability-Repo/main/01_data/7195417.ECG3710114AnesEvents-6%2B10mins_BIS.txt')
+
+RRI_3 <- read.csv('https://raw.githubusercontent.com/celisa/Heart-Rate-Variability-Repo/main/01_data/7195417.ECG3710114AnesEvents-6%2B10mins_RRI.txt')
+```
+
+```{r}
+plot(RRI_3)
+```
+
