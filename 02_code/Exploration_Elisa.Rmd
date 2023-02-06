@@ -26,6 +26,13 @@ RRI_3 <- read.csv('https://raw.githubusercontent.com/celisa/Heart-Rate-Variabili
 ```
 
 ```{r}
+plot(BIS_1)
+plot(RRI_1)
+plot(BIS_2)
+plot(RRI_2)
+plot(BIS_3)
 plot(RRI_3)
 ```
+
+
 
