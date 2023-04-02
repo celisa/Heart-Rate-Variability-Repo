@@ -11,6 +11,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## EDA
 
+Every subject's data is the same. At 6 minutes, that's where they get cut. We want to see what's the impact before and after. 
+
 ```{r}
 BIS_1 <- read.csv('https://raw.githubusercontent.com/celisa/Heart-Rate-Variability-Repo/main/01_data/06233283.ECG2442913AnesEvents-6%2B10mins_BIS.txt')
 
