@@ -17,6 +17,10 @@ library(rugarch)
 3) Tune hyperparameters --> look at the pacf plots to determine which ones. 
 3) Fit for rolling forecasts!
 
+- preprocessing: try exponential smoothing, splines
+- fitting: include BIS as exogenous variables
+- tune hyperparameters
+
 
 ```{r read in data, echo = FALSE}
 rris_diff <- read.csv(
@@ -52,7 +56,7 @@ forecasts <- varxforecast(rris_diff, varFit$Bcoef, p = 20, out.sample = 400, n.a
 ```{r}
 # plot for a single patient
 patient_num = 2
-plot(time, rris_diff[, patient_num], type = 'l')
+plot(time, rris_diff[, patient_num], type = 'l', , xlim = c(800, 960))
     lines(x = seq(from = start + 1/4, to = 960, by = 1/4) , y = forecasts[, patient_num, 1], type = 'l', col = 'red')
 ```
 
